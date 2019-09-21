@@ -1,0 +1,11 @@
+C:\Users\Gustavo\Desktop\Aula Revisão\bin\Debug\netcoreapp2.2\Aula Revisão.deps.json
+C:\Users\Gustavo\Desktop\Aula Revisão\bin\Debug\netcoreapp2.2\Aula Revisão.runtimeconfig.json
+C:\Users\Gustavo\Desktop\Aula Revisão\bin\Debug\netcoreapp2.2\Aula Revisão.runtimeconfig.dev.json
+C:\Users\Gustavo\Desktop\Aula Revisão\bin\Debug\netcoreapp2.2\Aula Revisão.dll
+C:\Users\Gustavo\Desktop\Aula Revisão\bin\Debug\netcoreapp2.2\Aula Revisão.pdb
+C:\Users\Gustavo\Desktop\Aula Revisão\obj\Debug\netcoreapp2.2\Aula Revisão.csprojAssemblyReference.cache
+C:\Users\Gustavo\Desktop\Aula Revisão\obj\Debug\netcoreapp2.2\Aula Revisão.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo\Desktop\Aula Revisão\obj\Debug\netcoreapp2.2\Aula Revisão.AssemblyInfoInputs.cache
+C:\Users\Gustavo\Desktop\Aula Revisão\obj\Debug\netcoreapp2.2\Aula Revisão.AssemblyInfo.cs
+C:\Users\Gustavo\Desktop\Aula Revisão\obj\Debug\netcoreapp2.2\Aula Revisão.dll
+C:\Users\Gustavo\Desktop\Aula Revisão\obj\Debug\netcoreapp2.2\Aula Revisão.pdb
