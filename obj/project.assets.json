@@ -691,12 +691,15 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gustavo\\Desktop\\Aula Revisão\\Aula Revisão.csproj",
+      "projectUniqueName": "C:\\Users\\Gustavo\\Desktop\\Aula-Revisao-1-2-3\\academy-aula-revisao-1-2-3\\Aula Revisão.csproj",
       "projectName": "Aula Revisão",
-      "projectPath": "C:\\Users\\Gustavo\\Desktop\\Aula Revisão\\Aula Revisão.csproj",
+      "projectPath": "C:\\Users\\Gustavo\\Desktop\\Aula-Revisao-1-2-3\\academy-aula-revisao-1-2-3\\Aula Revisão.csproj",
       "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gustavo\\Desktop\\Aula Revisão\\obj\\",
+      "outputPath": "C:\\Users\\Gustavo\\Desktop\\Aula-Revisao-1-2-3\\academy-aula-revisao-1-2-3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -730,7 +733,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.2.0, )",
+            "version": "2.2.0",
             "autoReferenced": true
           }
         },

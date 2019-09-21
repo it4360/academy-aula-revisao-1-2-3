@@ -6,6 +6,114 @@ namespace Aula_Revisão
     {
         static void Main(string[] args)
         {
+            
+
+            // ### Exercícios
+            // Você é contratado para fazer um sistema de chamados de suporte.
+            // O sistema deve conter as seguintes funcionalidades:
+            // 1. Cadastro de novo chamado
+            // - O chamado deve conter data de abertura, descrição, status e código do chamado          
+            // - Status possíveis do chamado: Aberto, Em andamento, Fechado.  
+            // 2. Cadastro de novo analista de suporte
+            // - O analista deve conter nome, e-mail, data de nascimento e código do analista.
+            // 3. Associar chamado à analista
+            // - Para associar um chamado a um analista, é necessário o código do analista e o código do chamado.
+            // - Antes de solicitar o código do chamado ou do analista, deve ser exibido uma lista dos mesmos para que 
+            // o usuário possa identificar o chamado e o analista no momento do associação.
+            // - Somente chamados em aberto podem ser associados a analistas.
+            // - A lista de chamados exibidas deve mostrar apenas os chamados que estão em aberto.
+            // - Quando o chamado for associado a um analista, o status do chamado deve mudar para em andamento.
+            // 4. Fechar chamado
+            // - Somente chamados que estão em andamento podem ser fechados.
+            // - Listar todos os chamados em andamento para que o usuário selecione o chamado 
+            // que deseja fechar através de seu código.
+            // - O status do chamado deve mudar para Fechado
+            // 5. Sair do sistema.
+
+            // Observações
+            // O número total de chamados é 10.
+            // O número total de analistas é 3.
+
+
+
+            // ########### SISTEMA DE CHAMADOS DO MAL ###########
+            string opcao;
+            Chamado[] chamados = new Chamado[1];
+            int quantidadeChamados = 0;
+
+            Analista[] analistas = new Analista[1];
+            int quantidadeAnalistas = 0;
+
+            do {
+
+                Console.WriteLine("O que deseja fazer ?");
+                Console.WriteLine("1. Cadastro de novo chamado");
+                Console.WriteLine("2. Cadastro de novo analista de suporte");
+                Console.WriteLine("3. Associar chamado à analista");
+                Console.WriteLine("4. Fechar chamado");
+                Console.WriteLine("5. Sair");
+
+                opcao = Console.ReadLine();
+
+                
+
+                // Cadastar chamado.
+                if(opcao == "1"){
+                    if(quantidadeChamados < 1)
+                    {
+                        // Pegar todas as informações que compoem um chamado.
+                        Chamado chamado = new Chamado {
+                            dataAbertura = DateTime.Now,
+                            statusChamado = StatusChamado.EmAberto,
+                            codigo = Guid.NewGuid().ToString()
+                        };
+
+                        Console.WriteLine("Qual a descrição do chamado ?");
+                        chamado.descricao = Console.ReadLine();
+
+                        // Adicionar o chamado na lista de chamados.
+                        chamados[quantidadeChamados] = chamado;
+                        quantidadeChamados++;
+                    } else {
+                        Console.WriteLine("Voce atingiu o maximo de chamados. Espera porra.");
+                    }
+                }
+                else if(opcao == "2"){
+                    if(quantidadeAnalistas < 1){
+                        Analista analista = new Analista{
+                            codigo = Guid.NewGuid().ToString()
+                        };
+
+                        Console.WriteLine("Qual o nome do analista?");
+                        analista.nome = Console.ReadLine();
+                        Console.WriteLine("Qual o e-mail do analista?");
+                        analista.email = Console.ReadLine();
+
+                        analistas[quantidadeAnalistas] = analista;
+                        quantidadeAnalistas++;
+                    } else {
+                        Console.WriteLine("Voce atingiu o maximo de analistas. Ta bom ja, chega.");
+                    }
+                }
+                else if(opcao == "3"){
+                    
+                }
+                else if(opcao == "4"){
+                    
+                }
+                else if(opcao == "5"){
+                    
+                }
+                else {
+                    Console.WriteLine("VATITOMANOCU RAPA. Burro do caralho, pega aqui.");
+                }
+
+            } while(opcao != "5");
+
+
+        }
+
+        public void Revisao(){
             // ### Variável e tipos
             int a = 10;
             string b = "string";
@@ -25,6 +133,7 @@ namespace Aula_Revisão
 
             // Escrever no console
             Console.WriteLine("texto");
+            
 
             // Solicitar digitação no console
             Console.ReadLine();
@@ -48,8 +157,8 @@ namespace Aula_Revisão
             // # Condicional 1
             if (a > 10)
             {
-                // O código colocado dentro deste escopo será executado apenas 
-                // se o valor de "a" for maior que 10
+                // O código colocado dentro deste escopo será executado 
+                //apenas se o valor de "a" for maior que 10
             }
 
             // # Condicional 2
@@ -70,7 +179,7 @@ namespace Aula_Revisão
                 // O código colocado dentro deste escopo será executado apenas 
                 // se o valor de "a" for maior que 20
             }
-            else if (a > 10) // Pode ter quantos else ifs precisam.
+            else if (a > 10 && a < 20 || a == 30) // Pode ter quantos else ifs precisam.
             {
                 // O código colocado dentro deste escopo será executado apenas 
                 // se o valor de "a" for maior que 10
@@ -93,6 +202,7 @@ namespace Aula_Revisão
                     // se o valor de "a" for igual a 20
                     break;
                 default:
+
                     break;
             }
 
@@ -115,8 +225,9 @@ namespace Aula_Revisão
             
             // # While 1
             bool @continue = true;
-            while(@continue){
-                // O código dentro deste escopo será executado enquanto a condição for verdadeira
+            while(@continue) {
+                // O código dentro deste escopo será executado 
+                // enquanto a condição for verdadeira
             }
 
             // # While 2
@@ -155,7 +266,6 @@ namespace Aula_Revisão
                 // pois a condição se encontra no final, e não no início.
                 // Enquanto a condição for verdadeira, o código dentro deste escopo será executado.
             } while (continuar);
-
             
             // ### Array
 
@@ -184,12 +294,12 @@ namespace Aula_Revisão
             {
                 // O for vai passar por cada posição do array.
                 // A variável "i" define a posição do array que será acessada.
-                int valorAtual = arrayDeInt[i];
+                int valorAtual = arrayDeInt[0];
             }
 
             // ### Orientação a objetos
 
-            // ##Abstração
+            // ## Abstração
             // Feita através de classes e objetos.
 
             // ## Classes e objetos
@@ -210,7 +320,7 @@ namespace Aula_Revisão
 
             // Como atribuir valor aos campos de um objeto
             rev.dataInicio = DateTime.Now;
-            rev.dataFim = DateTime.Now;
+            rev.dataInicio = DateTime.Now;
             rev.local = "IT4 Solution - 3 andar";
             rev.professor = new Professor();
 
@@ -226,7 +336,10 @@ namespace Aula_Revisão
             Revisao[] arrayDeRevisao2 = new Revisao[10];
             
             // Exemplo com array: atribuição de valores às posições do array
-            arrayDeRevisao2[0] = new Revisao();
+
+            arrayDeRevisao2[0] = new Revisao {
+                dataFim = DateTime.Now,
+            };
             arrayDeRevisao2[1] = new Revisao();
             arrayDeRevisao2[2] = new Revisao();
             arrayDeRevisao2[3] = new Revisao();
@@ -244,7 +357,7 @@ namespace Aula_Revisão
             arrayDeRevisao2[0].professor = new Professor();
 
             // Iterar array de objeto
-            for (int i = 0; i < arrayDeInt.Length; i++)
+            for (int i = 0; i < arrayDeRevisao2.Length; i++)
             {
                 // O for vai passar por cada posição do array.
                 // A variável "i" define a posição do array que será acessada.
@@ -276,36 +389,9 @@ namespace Aula_Revisão
             revisaumm.NovoProfessor(new Professor());
             // atribuir retorno do método a uma variavel
             int retornoMetodo4 = revisaumm.Metodo4(0, 0);
-            string nomeNovoProfessor = revisaumm.NovoProfessor(new Professor());
+            Professor nomeNovoProfessor = revisaumm.NovoProfessor(new Professor());
 
             // ### NAMESPACE
-
-            // ### Exercícios
-            // Você é contratado para fazer um sistema de chamados de suporte.
-            
-            // O sistema deve conter as seguintes funcionalidades:
-            // 1. Cadastro de novo chamado
-            // - O chamado deve conter data de abertura, descrição, status e código do chamado          
-            // - Status possíveis do chamado: Aberto, Em andamento, Fechado.  
-            // 2. Cadastro de novo analista de suporte
-            // - O analista deve conter nome, e-mail, data de nascimento e código do analista.
-            // 3. Associar chamado à analista
-            // - Para associar um chamado a um analista, é necessário o código do analista e o código do chamado.
-            // - Antes de solicitar o código do chamado ou do analista, deve ser exibido uma lista dos mesmos para que 
-            // o usuário possa identificar o chamado e o analista no momento do associação.
-            // - Somente chamados em aberto podem ser associados a analistas.
-            // - A lista de chamados exibidas deve mostrar apenas os chamados que estão em aberto.
-            // - Quando o chamado for associado a um analista, o status do chamado deve mudar para em andamento.
-            // 4. Fechar chamado
-            // - Somente chamados que estão em andamento podem ser fechados.
-            // - Listar todos os chamados em andamento para que o usuário selecione o chamado 
-            // que deseja fechar através de seu código.
-            // 5. Sair do sistema.
-
-            // Observações
-            // O número total de chamados é 10.
-            // O número total de analistas é 3.
-
         }
     }
 }

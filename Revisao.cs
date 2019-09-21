@@ -13,7 +13,7 @@ namespace Aula_Revisão {
 
         // ## Método sem retorno e não recebe parametros
         public void Metodo1(){
-
+            
         }
 
         // Exemplo: Método que informa que a aula iniciou
@@ -49,9 +49,9 @@ namespace Aula_Revisão {
         }
 
         // Exemplo: Método que altera o professor
-        public string NovoProfessor(Professor novoProfessor){
+        public Professor NovoProfessor(Professor novoProfessor){
             this.professor = novoProfessor;
-            return this.professor.name;
+            return this.professor;
         }
 
     }
